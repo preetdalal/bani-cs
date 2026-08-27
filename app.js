@@ -28,15 +28,15 @@ let pomoRemainingSeconds = 25 * 60;
 let pomoIsRunning = false;
 let pomoCurrentMode = "Focus Session";
 
-// Motivational Quotes for CS Aspirants
+// Motivational Quotes specifically for Bani
 const MOTIVATIONAL_QUOTES = [
-  '"Success in CS Executive is the sum of small chapter-by-chapter efforts, repeated day in and day out."',
-  '"Company Secretaries are the conscience keepers of corporate governance. Master your laws today!"',
-  '"Consistency is key. One section, one case law, one rule at a time."',
-  '"Focus on concepts and bare act understanding. High marks naturally follow clarity."',
-  '"Every completed chapter brings you one step closer to adding CS before your name!"',
-  '"Discipline is choosing between what you want now and what you want most."',
-  '"Your future board room awaits your legal wisdom. Keep studying strong!"'
+  '"You have got this, Bani! Every single chapter brings you closer to becoming CS Bani."',
+  '"Bani, consistency is your superpower. Master your corporate laws today!"',
+  '"Future Company Secretary Bani in the making. Keep going strong!"',
+  '"Take a deep breath, Bani. One section, one case law, one rule at a time."',
+  '"The board room is waiting for CS Bani. Keep up the amazing dedication!"',
+  '"Bani, discipline is choosing between what you want now and what you want most."',
+  '"Believe in your preparation, Bani. Your hard work will make you an outstanding Company Secretary!"'
 ];
 
 /* ==========================================================================
@@ -408,7 +408,7 @@ function createChapterRowElement(chapter, paperId) {
       class="btn-notes-toggle ${hasNotes ? "has-notes" : ""}" 
       id="btn-note-${chapter.id}"
       onclick="toggleNotesDrawer('${chapter.id}')"
-      title="Personal Chapter Notes"
+      title="Bani's Chapter Notes"
     >📝</button>
 
     <!-- Star / Bookmark Button -->
@@ -417,7 +417,7 @@ function createChapterRowElement(chapter, paperId) {
       class="btn-star ${isStarred ? "starred" : ""}" 
       id="star-${chapter.id}"
       onclick="toggleBookmark('${chapter.id}', this)"
-      title="Bookmark chapter for urgent revision"
+      title="Bookmark chapter for Bani's urgent revision"
     >${isStarred ? "⭐" : "☆"}</button>
   `;
 
@@ -433,7 +433,7 @@ function createChapterRowElement(chapter, paperId) {
     <textarea 
       class="chapter-notes-textarea" 
       id="textarea-${chapter.id}"
-      placeholder="Type personal summary notes, section numbers, case laws, or weak concepts to revise..."
+      placeholder="Type Bani's summary notes, section numbers, case laws, or weak concepts to revise..."
       oninput="handleNotesInput('${chapter.id}', this.value)"
     >${escapeHtml(existingNote)}</textarea>
     <div class="notes-status-hint">
@@ -910,7 +910,7 @@ function togglePomoTimer() {
         saveStateToStorage();
         updatePomoDisplay();
         triggerConfetti();
-        alert(`Time is up! Great job finishing your ${pomoCurrentMode}!`);
+        alert(`Time is up, Bani! Superb job finishing your ${pomoCurrentMode}!`);
       }
     }, 1000);
   }
@@ -999,7 +999,7 @@ function exportUserData() {
   const downloadAnchor = document.createElement("a");
   const dateStamp = new Date().toISOString().split("T")[0];
   downloadAnchor.setAttribute("href", dataStr);
-  downloadAnchor.setAttribute("download", `CS_Executive_Study_Progress_${dateStamp}.json`);
+  downloadAnchor.setAttribute("download", `Bani_CS_Executive_Progress_${dateStamp}.json`);
   document.body.appendChild(downloadAnchor);
   downloadAnchor.click();
   downloadAnchor.remove();
@@ -1027,7 +1027,7 @@ function importUserData(event) {
         updateAllMetrics();
         updateCountdown();
         toggleBackupModal();
-        alert("Progress backup imported successfully!");
+        alert("Bani's study progress backup imported successfully!");
       }
     } catch (err) {
       alert("Error reading backup file. Please ensure it is a valid JSON file exported from this app.");
@@ -1037,7 +1037,7 @@ function importUserData(event) {
 }
 
 function confirmResetProgress() {
-  const confirmed = confirm("Are you sure you want to reset all your completed checkboxes, revisions, and notes? This cannot be undone.");
+  const confirmed = confirm("Are you sure you want to reset all of Bani's completed checkboxes, revisions, and notes? This cannot be undone.");
   if (confirmed) {
     appState = {
       completed: {},
@@ -1051,7 +1051,7 @@ function confirmResetProgress() {
     renderSyllabus();
     updateAllMetrics();
     toggleBackupModal();
-    alert("Workspace progress has been reset.");
+    alert("Bani's workspace progress has been reset.");
   }
 }
 

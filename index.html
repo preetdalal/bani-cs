@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CS Executive Study Tracker | ICSI Syllabus 2022</title>
-  <meta name="description" content="Dedicated study companion and chapter-wise syllabus tracker for ICSI Company Secretary (CS) Executive Programme 2022 Syllabus.">
+  <title>Bani's CS Executive Tracker | ICSI Syllabus 2022</title>
+  <meta name="description" content="Dedicated personalized study companion and chapter-wise syllabus tracker for Bani's ICSI Company Secretary (CS) Executive Programme preparation.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -20,8 +20,8 @@
         <div class="auth-glow"></div>
         <div class="auth-icon">☕</div>
       </div>
-      <h1 class="auth-title">Welcome to CS Executive Companion</h1>
-      <p class="auth-subtitle">Enter the secret access pass to unlock your personalized study workspace</p>
+      <h1 class="auth-title">Welcome, Bani!</h1>
+      <p class="auth-subtitle">Enter your secret pass to unlock your personalized CS study workspace</p>
       
       <form id="authForm" class="auth-form" onsubmit="handleAuthSubmit(event)">
         <div class="input-group">
@@ -36,14 +36,14 @@
             <span id="pwdIcon">👁️</span>
           </button>
         </div>
-        <div id="authError" class="auth-error hidden">Incorrect password. Hint: Check with your study buddy!</div>
+        <div id="authError" class="auth-error hidden">Incorrect password, Bani! Hint: tajkichai ☕</div>
         <button type="submit" class="btn-primary btn-unlock">
-          <span>Unlock Study Workspace</span>
+          <span>Unlock Bani's Workspace</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </button>
       </form>
       <div class="auth-footer">
-        <span>Protected ICSI 2022 Syllabus Workspace</span>
+        <span>Curated Exclusively for Bani | ICSI 2022 Syllabus</span>
       </div>
     </div>
   </div>
@@ -55,15 +55,15 @@
     <header class="app-header">
       <div class="header-inner">
         <div class="brand-block">
-          <div class="brand-badge">ICSI 2022 SYLLABUS</div>
-          <h1 class="brand-title">CS Executive <span>Tracker</span></h1>
-          <p class="brand-tagline">Comprehensive Master Tracker for Company Secretary Aspirants</p>
+          <div class="brand-badge">BANI'S STUDY HUB | ICSI 2022</div>
+          <h1 class="brand-title">Bani's CS <span>Executive Tracker</span></h1>
+          <p class="brand-tagline">Your personalized master tracker on the journey to becoming CS Bani</p>
         </div>
 
         <!-- Header Actions -->
         <div class="header-actions">
           <!-- Countdown Trigger -->
-          <div class="quick-widget countdown-widget" onclick="openExamDateModal()" title="Click to set exam target date">
+          <div class="quick-widget countdown-widget" onclick="openExamDateModal()" title="Click to set Bani's target exam date">
             <div class="widget-icon">⏳</div>
             <div class="widget-info">
               <span class="widget-label">Exam Target</span>
@@ -72,14 +72,14 @@
           </div>
 
           <!-- Pomodoro Mini Widget -->
-          <button class="btn-header-tool" onclick="togglePomodoroModal()" title="Open Pomodoro Focus Timer">
+          <button class="btn-header-tool" onclick="togglePomodoroModal()" title="Open Bani's Pomodoro Focus Timer">
             <span class="tool-icon">⏱️</span>
             <span class="tool-text">Focus Timer</span>
             <span id="pomoHeaderBadge" class="pomo-badge hidden">25:00</span>
           </button>
 
           <!-- Backup & Restore -->
-          <button class="btn-header-tool" onclick="toggleBackupModal()" title="Backup or Restore Study Data">
+          <button class="btn-header-tool" onclick="toggleBackupModal()" title="Backup or Restore Bani's Study Data">
             <span class="tool-icon">💾</span>
             <span class="tool-text">Data / Export</span>
           </button>
@@ -111,7 +111,7 @@
             </div>
           </div>
           <div class="main-stat-details">
-            <h2 class="stat-headline">Syllabus Completion</h2>
+            <h2 class="stat-headline">Bani's Preparation Progress</h2>
             <p class="stat-subtext"><span id="completedChaptersCount">0</span> of <span id="totalChaptersCount">0</span> Chapters Finished</p>
             <div class="stat-pills">
               <div class="stat-pill"><span class="pill-dot blue"></span> Total Papers: <strong>7 Papers</strong></div>
@@ -216,7 +216,7 @@
       <div class="footer-links">
         <a href="https://www.icsi.edu/academic-portal/new-syllabus-2022/executive-programme/" target="_blank" rel="noopener noreferrer">Official ICSI Academic Portal ↗</a>
         <span>•</span>
-        <button class="btn-link-action" onclick="printChecklist()">Print Study Checklist 🖨️</button>
+        <button class="btn-link-action" onclick="printChecklist()">Print Bani's Study Checklist 🖨️</button>
       </div>
     </footer>
   </div>
@@ -226,7 +226,7 @@
     <div class="modal-card">
       <div class="modal-header">
         <div class="modal-title-wrap">
-          <span class="modal-badge">FOCUS BOOSTER</span>
+          <span class="modal-badge">BANI'S FOCUS BOOSTER</span>
           <h2>Pomodoro Study Timer</h2>
         </div>
         <button class="btn-close-modal" onclick="togglePomodoroModal()">✕</button>
@@ -257,7 +257,7 @@
         <div class="pomo-stats">
           <div class="pomo-stat-item">
             <span class="pomo-stat-num" id="pomoCompletedSessions">0</span>
-            <span class="pomo-stat-label">Sessions Completed Today</span>
+            <span class="pomo-stat-label">Bani's Sessions Completed Today</span>
           </div>
         </div>
       </div>
@@ -269,13 +269,13 @@
     <div class="modal-card">
       <div class="modal-header">
         <div class="modal-title-wrap">
-          <span class="modal-badge">EXAM TARGET</span>
+          <span class="modal-badge">BANI'S EXAM TARGET</span>
           <h2>Set Target CS Exam Date</h2>
         </div>
         <button class="btn-close-modal" onclick="closeExamDateModal()">✕</button>
       </div>
       <div class="modal-body-pad">
-        <p class="modal-desc">Set the target date for your upcoming ICSI CS Executive Examination to keep your countdown live.</p>
+        <p class="modal-desc">Set the target date for your upcoming ICSI CS Executive Examination to keep your live countdown ticking, Bani!</p>
         <div class="date-input-wrap">
           <label for="examDatePicker">Select Examination Date:</label>
           <input type="date" id="examDatePicker" class="custom-date-input">
@@ -298,16 +298,16 @@
       <div class="modal-header">
         <div class="modal-title-wrap">
           <span class="modal-badge">DATA & SYNC</span>
-          <h2>Study Progress Backup</h2>
+          <h2>Bani's Study Progress Backup</h2>
         </div>
         <button class="btn-close-modal" onclick="toggleBackupModal()">✕</button>
       </div>
       <div class="modal-body-pad">
-        <p class="modal-desc">All your chapter checkboxes, revision ticks, and notes are saved automatically to your device's browser memory (localStorage). You can also export or import your progress as a file.</p>
+        <p class="modal-desc">All of Bani's chapter checkboxes, revision ticks, and personal notes are saved automatically to your device's browser memory (localStorage). You can also export or import your progress as a file.</p>
         
         <div class="backup-actions-grid">
           <div class="backup-box">
-            <h4>Export Progress File</h4>
+            <h4>Export Bani's Progress File</h4>
             <p>Download a JSON backup of your checkboxes, notes, and study stats to keep safe or transfer to another device.</p>
             <button class="btn-primary btn-sm" onclick="exportUserData()">Export Backup (.json)</button>
           </div>

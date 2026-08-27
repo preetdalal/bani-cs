@@ -1,6 +1,6 @@
-# CS Executive Study Tracker (ICSI Syllabus 2022)
+# Bani's CS Executive Study Tracker (ICSI Syllabus 2022)
 
-A dedicated, modern study companion website created for Company Secretary (CS) Executive Programme aspirants.
+A dedicated, personalized modern study companion website created exclusively for Bani's Company Secretary (CS) Executive Programme preparation.
 
 ## Key Features
 
