@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS Executive Study Tracker | ICSI Syllabus 2022</title>
+  <meta name="description" content="Dedicated study companion and chapter-wise syllabus tracker for ICSI Company Secretary (CS) Executive Programme 2022 Syllabus.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+</head>
+<body class="theme-blue">
+
+  <!-- Password Protection Modal -->
+  <div id="authOverlay" class="auth-overlay">
+    <div class="auth-card">
+      <div class="auth-icon-wrap">
+        <div class="auth-glow"></div>
+        <div class="auth-icon">☕</div>
+      </div>
+      <h1 class="auth-title">Welcome to CS Executive Companion</h1>
+      <p class="auth-subtitle">Enter the secret access pass to unlock your personalized study workspace</p>
+      
+      <form id="authForm" class="auth-form" onsubmit="handleAuthSubmit(event)">
+        <div class="input-group">
+          <input 
+            type="password" 
+            id="passwordInput" 
+            placeholder="Enter password..." 
+            autocomplete="current-password"
+            required
+          >
+          <button type="button" class="btn-toggle-pwd" onclick="togglePasswordVisibility()" aria-label="Toggle password view">
+            <span id="pwdIcon">👁️</span>
+          </button>
+        </div>
+        <div id="authError" class="auth-error hidden">Incorrect password. Hint: Check with your study buddy!</div>
+        <button type="submit" class="btn-primary btn-unlock">
+          <span>Unlock Study Workspace</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </form>
+      <div class="auth-footer">
+        <span>Protected ICSI 2022 Syllabus Workspace</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Application Container -->
+  <div id="appContainer" class="app-container hidden">
+
+    <!-- Top Navigation Header -->
+    <header class="app-header">
+      <div class="header-inner">
+        <div class="brand-block">
+          <div class="brand-badge">ICSI 2022 SYLLABUS</div>
+          <h1 class="brand-title">CS Executive <span>Tracker</span></h1>
+          <p class="brand-tagline">Comprehensive Master Tracker for Company Secretary Aspirants</p>
+        </div>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <!-- Countdown Trigger -->
+          <div class="quick-widget countdown-widget" onclick="openExamDateModal()" title="Click to set exam target date">
+            <div class="widget-icon">⏳</div>
+            <div class="widget-info">
+              <span class="widget-label">Exam Target</span>
+              <span class="widget-value" id="examCountdownDays">-- Days left</span>
+            </div>
+          </div>
+
+          <!-- Pomodoro Mini Widget -->
+          <button class="btn-header-tool" onclick="togglePomodoroModal()" title="Open Pomodoro Focus Timer">
+            <span class="tool-icon">⏱️</span>
+            <span class="tool-text">Focus Timer</span>
+            <span id="pomoHeaderBadge" class="pomo-badge hidden">25:00</span>
+          </button>
+
+          <!-- Backup & Restore -->
+          <button class="btn-header-tool" onclick="toggleBackupModal()" title="Backup or Restore Study Data">
+            <span class="tool-icon">💾</span>
+            <span class="tool-text">Data / Export</span>
+          </button>
+
+          <!-- Lock Button -->
+          <button class="btn-lock" onclick="lockWebsite()" title="Lock Workspace">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <span>Lock</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Global Progress Dashboard -->
+    <section class="dashboard-section">
+      <div class="stats-grid">
+        <!-- Main Overall Gauge Card -->
+        <div class="stat-card stat-card-main">
+          <div class="main-gauge-wrap">
+            <div class="circular-progress" id="mainCircularGauge">
+              <svg viewBox="0 0 120 120" class="gauge-svg">
+                <circle class="gauge-bg" cx="60" cy="60" r="52"></circle>
+                <circle class="gauge-fill" id="mainGaugeFill" cx="60" cy="60" r="52"></circle>
+              </svg>
+              <div class="gauge-center">
+                <span class="gauge-percent" id="overallPercentText">0%</span>
+                <span class="gauge-sub">Prepared</span>
+              </div>
+            </div>
+          </div>
+          <div class="main-stat-details">
+            <h2 class="stat-headline">Syllabus Completion</h2>
+            <p class="stat-subtext"><span id="completedChaptersCount">0</span> of <span id="totalChaptersCount">0</span> Chapters Finished</p>
+            <div class="stat-pills">
+              <div class="stat-pill"><span class="pill-dot blue"></span> Total Papers: <strong>7 Papers</strong></div>
+              <div class="stat-pill"><span class="pill-dot cyan"></span> Marks: <strong>700 Marks</strong></div>
+              <div class="stat-pill"><span class="pill-dot green"></span> Revisions Done: <strong id="totalRevisionsDone">0</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Group 1 Metric Card -->
+        <div class="stat-card stat-card-group" onclick="switchGroupTab('group-1')">
+          <div class="group-metric-header">
+            <div class="group-metric-title">
+              <span class="badge-group g1">GROUP 1</span>
+              <h3>4 Papers (400 M)</h3>
+            </div>
+            <div class="group-metric-percent" id="g1PercentText">0%</div>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill g1-fill" id="g1ProgressBar" style="width: 0%;"></div>
+          </div>
+          <div class="group-metric-footer">
+            <span>JIGL | CLP | SBILL | CAFM</span>
+            <span id="g1RatioText">0/0 Ch</span>
+          </div>
+        </div>
+
+        <!-- Group 2 Metric Card -->
+        <div class="stat-card stat-card-group" onclick="switchGroupTab('group-2')">
+          <div class="group-metric-header">
+            <div class="group-metric-title">
+              <span class="badge-group g2">GROUP 2</span>
+              <h3>3 Papers (300 M)</h3>
+            </div>
+            <div class="group-metric-percent" id="g2PercentText">0%</div>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill g2-fill" id="g2ProgressBar" style="width: 0%;"></div>
+          </div>
+          <div class="group-metric-footer">
+            <span>CMSL | ECIPL | TLP</span>
+            <span id="g2RatioText">0/0 Ch</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controls, Filter & Search Bar -->
+    <section class="controls-section">
+      <div class="controls-bar">
+        <!-- Group View Tabs -->
+        <div class="group-tabs">
+          <button class="tab-btn active" data-group="all" onclick="switchGroupTab('all')">All Groups (7 Papers)</button>
+          <button class="tab-btn" data-group="group-1" onclick="switchGroupTab('group-1')">Group 1 (4 Papers)</button>
+          <button class="tab-btn" data-group="group-2" onclick="switchGroupTab('group-2')">Group 2 (3 Papers)</button>
+        </div>
+
+        <!-- Search and Filter Controls -->
+        <div class="search-filter-wrap">
+          <!-- Search Input -->
+          <div class="search-box">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input 
+              type="text" 
+              id="chapterSearchInput" 
+              placeholder="Search chapters, concepts, acts..." 
+              oninput="handleSearch(this.value)"
+            >
+            <button id="clearSearchBtn" class="btn-clear hidden" onclick="clearSearch()">✕</button>
+          </div>
+
+          <!-- Status Dropdown Filter -->
+          <select id="statusFilter" class="select-filter" onchange="applyStatusFilter(this.value)">
+            <option value="all">Status: All Chapters</option>
+            <option value="pending">Status: Pending Only</option>
+            <option value="completed">Status: Completed Only</option>
+            <option value="bookmarked">Filter: Starred / Bookmarked</option>
+            <option value="important">Filter: High Yield / Important</option>
+            <option value="revised">Filter: Revised At Least Once</option>
+          </select>
+
+          <!-- Expand / Collapse All -->
+          <button class="btn-action-ghost" onclick="toggleExpandAll()" id="btnExpandAll" title="Toggle Expand/Collapse all papers">
+            <span id="expandIcon">↕️</span>
+            <span id="expandText">Collapse All</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Area: Groups and Papers -->
+    <main class="syllabus-main" id="syllabusContainer">
+      <!-- Dynamic content rendered via app.js -->
+    </main>
+
+    <!-- Motivational Footer Bar -->
+    <footer class="app-footer">
+      <div class="footer-quote">
+        <span class="quote-icon">💡</span>
+        <span class="quote-text" id="dailyQuote">"Success in CS Executive is the sum of small chapter-by-chapter efforts, repeated day in and day out."</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.icsi.edu/academic-portal/new-syllabus-2022/executive-programme/" target="_blank" rel="noopener noreferrer">Official ICSI Academic Portal ↗</a>
+        <span>•</span>
+        <button class="btn-link-action" onclick="printChecklist()">Print Study Checklist 🖨️</button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Pomodoro Focus Timer Modal -->
+  <div id="pomodoroModal" class="modal-overlay hidden" onclick="handleModalBackdrop(event, 'pomodoroModal')">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-badge">FOCUS BOOSTER</span>
+          <h2>Pomodoro Study Timer</h2>
+        </div>
+        <button class="btn-close-modal" onclick="togglePomodoroModal()">✕</button>
+      </div>
+      <div class="pomo-body">
+        <div class="pomo-presets">
+          <button class="pomo-preset-btn active" onclick="setPomoTime(25, 'Focus Session')">25m Study</button>
+          <button class="pomo-preset-btn" onclick="setPomoTime(50, 'Deep Work')">50m Deep Work</button>
+          <button class="pomo-preset-btn" onclick="setPomoTime(5, 'Short Break')">5m Break</button>
+          <button class="pomo-preset-btn" onclick="setPomoTime(15, 'Long Break')">15m Break</button>
+        </div>
+        
+        <div class="pomo-timer-display">
+          <div class="pomo-mode-label" id="pomoModeLabel">Focus Session</div>
+          <div class="pomo-digits" id="pomoDigits">25:00</div>
+          <div class="pomo-progress-ring">
+            <div class="pomo-ring-fill" id="pomoRingFill" style="width: 100%;"></div>
+          </div>
+        </div>
+
+        <div class="pomo-controls">
+          <button class="btn-pomo-primary" id="pomoStartBtn" onclick="togglePomoTimer()">
+            <span>Start Timer</span>
+          </button>
+          <button class="btn-pomo-secondary" onclick="resetPomoTimer()">Reset</button>
+        </div>
+
+        <div class="pomo-stats">
+          <div class="pomo-stat-item">
+            <span class="pomo-stat-num" id="pomoCompletedSessions">0</span>
+            <span class="pomo-stat-label">Sessions Completed Today</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Exam Target Date Modal -->
+  <div id="examDateModal" class="modal-overlay hidden" onclick="handleModalBackdrop(event, 'examDateModal')">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-badge">EXAM TARGET</span>
+          <h2>Set Target CS Exam Date</h2>
+        </div>
+        <button class="btn-close-modal" onclick="closeExamDateModal()">✕</button>
+      </div>
+      <div class="modal-body-pad">
+        <p class="modal-desc">Set the target date for your upcoming ICSI CS Executive Examination to keep your countdown live.</p>
+        <div class="date-input-wrap">
+          <label for="examDatePicker">Select Examination Date:</label>
+          <input type="date" id="examDatePicker" class="custom-date-input">
+        </div>
+        <div class="quick-date-buttons">
+          <button class="btn-quick-date" onclick="setPresetExamDate('dec')">December Session (Dec 21)</button>
+          <button class="btn-quick-date" onclick="setPresetExamDate('june')">June Session (June 01)</button>
+        </div>
+        <div class="modal-actions-right">
+          <button class="btn-ghost" onclick="closeExamDateModal()">Cancel</button>
+          <button class="btn-primary" onclick="saveExamTargetDate()">Save Target Date</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Data Backup & Restore Modal -->
+  <div id="backupModal" class="modal-overlay hidden" onclick="handleModalBackdrop(event, 'backupModal')">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-badge">DATA & SYNC</span>
+          <h2>Study Progress Backup</h2>
+        </div>
+        <button class="btn-close-modal" onclick="toggleBackupModal()">✕</button>
+      </div>
+      <div class="modal-body-pad">
+        <p class="modal-desc">All your chapter checkboxes, revision ticks, and notes are saved automatically to your device's browser memory (localStorage). You can also export or import your progress as a file.</p>
+        
+        <div class="backup-actions-grid">
+          <div class="backup-box">
+            <h4>Export Progress File</h4>
+            <p>Download a JSON backup of your checkboxes, notes, and study stats to keep safe or transfer to another device.</p>
+            <button class="btn-primary btn-sm" onclick="exportUserData()">Export Backup (.json)</button>
+          </div>
+
+          <div class="backup-box">
+            <h4>Import Backup File</h4>
+            <p>Restore your saved progress from a previously downloaded JSON file.</p>
+            <input type="file" id="importFileInput" accept=".json" style="display:none;" onchange="importUserData(event)">
+            <button class="btn-secondary btn-sm" onclick="document.getElementById('importFileInput').click()">Upload Backup File</button>
+          </div>
+        </div>
+
+        <div class="danger-zone">
+          <div class="danger-info">
+            <strong>Reset Progress:</strong> Need to start completely fresh? This will clear all checked chapters and notes.
+          </div>
+          <button class="btn-danger-outline btn-sm" onclick="confirmResetProgress()">Reset All Progress</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confetti Canvas Container -->
+  <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+
+  <!-- Load Scripts -->
+  <script src="syllabus-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
