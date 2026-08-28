@@ -734,62 +734,41 @@ const SYLLABUS_DATA = {
                 {
                   id: "p6-c4",
                   number: 4,
-                  title: "Foreign Contribution (Regulation) Act, 2010 (FCRA)",
-                  subtopics: "Prohibition to accept Foreign Contribution, Registration and Prior Permission, Designated Bank Accounts",
-                  important: false
-                },
-                {
-                  id: "p6-c5",
-                  number: 5,
                   title: "Prevention of Money Laundering Act, 2002 (PMLA)",
                   subtopics: "Offence of Money Laundering, Attachment of Property, Obligations of Banking Companies & Intermediaries, FIU-IND",
                   important: true
                 },
                 {
-                  id: "p6-c6",
-                  number: 6,
+                  id: "p6-c5",
+                  number: 5,
                   title: "Fugitive Economic Offenders & Benami Transactions Law",
                   subtopics: "Declaration of Fugitive Economic Offender, Confiscation of Property, Prohibition of Benami Property Transactions Act",
                   important: true
                 },
                 {
-                  id: "p6-c7",
-                  number: 7,
+                  id: "p6-c6",
+                  number: 6,
                   title: "Competition Act, 2002",
                   subtopics: "Anti-Competitive Agreements (Section 3), Abuse of Dominant Position (Section 4), Regulation of Combinations (Section 5/6), CCI",
                   important: true
                 },
                 {
-                  id: "p6-c8",
-                  number: 8,
+                  id: "p6-c7",
+                  number: 7,
                   title: "Consumer Protection Act, 2019",
                   subtopics: "Consumer Rights, Central Consumer Protection Authority (CCPA), Product Liability, Dispute Redressal Commissions (District, State, National)",
                   important: true
                 },
                 {
-                  id: "p6-c9",
-                  number: 9,
-                  title: "Essential Commodities & Legal Metrology Act",
-                  subtopics: "Control of Production, Supply & Distribution of Commodities, Standard Units of Weights and Measures, Pre-packaged Commodities",
-                  important: false
-                },
-                {
-                  id: "p6-c10",
-                  number: 10,
-                  title: "Transfer of Property Act, 1882",
-                  subtopics: "Movable vs Immovable Property, Sale, Mortgage, Lease, Exchange, Gift, Actionable Claims, Doctrine of Lis Pendens",
-                  important: true
-                },
-                {
-                  id: "p6-c11",
-                  number: 11,
+                  id: "p6-c8",
+                  number: 8,
                   title: "Real Estate (Regulation and Development) Act, 2016 (RERA)",
                   subtopics: "Registration of Real Estate Projects, Functions of Promoters, Allottee Rights, RERA Authority & Appellate Tribunal",
                   important: true
                 },
                 {
-                  id: "p6-c12",
-                  number: 12,
+                  id: "p6-c9",
+                  number: 9,
                   title: "Special Economic Zones Act, 2005 (SEZ)",
                   subtopics: "Establishment of SEZ, Setting up of Units, Fiscal Concessions and Incentives, Single Window Clearance Mechanism",
                   important: false
@@ -801,43 +780,43 @@ const SYLLABUS_DATA = {
               marks: 40,
               chapters: [
                 {
-                  id: "p6-c13",
-                  number: 13,
+                  id: "p6-c10",
+                  number: 10,
                   title: "Law relating to Patents (Patents Act, 1970)",
                   subtopics: "Patentability Criteria (Novelty, Inventive Step, Industrial Application), Non-patentable Inventions (Section 3), Infringement & Remedies",
                   important: true
                 },
                 {
-                  id: "p6-c14",
-                  number: 14,
+                  id: "p6-c11",
+                  number: 11,
                   title: "Law relating to Trade Marks (Trade Marks Act, 1999)",
                   subtopics: "Absolute & Relative Grounds for Refusal, Registration Procedure, Well-Known Trademarks, Infringement vs Passing Off",
                   important: true
                 },
                 {
-                  id: "p6-c15",
-                  number: 15,
+                  id: "p6-c12",
+                  number: 12,
                   title: "Law relating to Copyrights (Copyright Act, 1957)",
                   subtopics: "Works protected, Ownership of Copyright, Moral Rights, Fair Dealing Provisions, Term of Copyright, Copyright Societies",
                   important: true
                 },
                 {
-                  id: "p6-c16",
-                  number: 16,
+                  id: "p6-c13",
+                  number: 13,
                   title: "Law relating to Geographical Indications (GI Act, 1999)",
                   subtopics: "Meaning of GI, Registration Process, Authorized Users, Infringement, Distinction between Trademark & GI",
                   important: false
                 },
                 {
-                  id: "p6-c17",
-                  number: 17,
+                  id: "p6-c14",
+                  number: 14,
                   title: "Law relating to Industrial Designs (Designs Act, 2000)",
                   subtopics: "Definition of Design, Novelty & Originality, Prohibition of Registration, Piracy of Registered Design",
                   important: false
                 },
                 {
-                  id: "p6-c18",
-                  number: 18,
+                  id: "p6-c15",
+                  number: 15,
                   title: "Trade Secrets, Cyber IPR & International Treaties",
                   subtopics: "Protection of Confidential Information, Domain Name Disputes (UDRP), Overview of TRIPS Agreement, Paris Convention, WIPO",
                   important: false
@@ -854,7 +833,7 @@ const SYLLABUS_DATA = {
           marks: 100,
           pattern: "20% Case-based Objective + 80% Descriptive",
           duration: "3 Hours",
-          description: "Direct taxation under Income Tax Act (all five heads) and Indirect taxation under GST and Customs Act.",
+          description: "Direct taxation under Income Tax Act (all five heads and entity assessments) and Indirect taxation under GST and Customs Act.",
           parts: [
             {
               name: "Part I: Direct Tax (60 Marks)",
@@ -919,29 +898,43 @@ const SYLLABUS_DATA = {
                 {
                   id: "p7-c9",
                   number: 9,
-                  title: "Clubbing of Income & Set-off / Carry Forward of Losses",
-                  subtopics: "Clubbing of Minor and Spouse Income, Inter-source & Inter-head Set-off Rules, Carry Forward Periods and Conditions for Losses",
+                  title: "Clubbing of Income",
+                  subtopics: "Income of Spouse, Minor Child, Son's Wife, Cross Transfers, Revocable Transfer of Assets (Section 60 to 65)",
                   important: true
                 },
                 {
                   id: "p7-c10",
                   number: 10,
-                  title: "Deductions from Gross Total Income (Chapter VI-A)",
-                  subtopics: "Section 80C, 80CCC, 80CCD, 80D (Health Insurance), 80DD, 80E (Education Loan), 80G (Donations), 80TTA/80TTB, 80U",
+                  title: "Set-off and Carry Forward of Losses",
+                  subtopics: "Inter-source vs Inter-head Set-off Rules, Carry Forward Periods and Conditions for Business, Capital & Speculation Losses",
                   important: true
                 },
                 {
                   id: "p7-c11",
                   number: 11,
-                  title: "Computation of Total Income & Tax Liability",
-                  subtopics: "Rebate under Section 87A, Surcharge, Health & Education Cess, Alternate Minimum Tax (AMT), Corporate Taxation & MAT",
+                  title: "Deductions from Gross Total Income (Chapter VI-A)",
+                  subtopics: "Section 80C, 80CCC, 80CCD, 80D (Health Insurance), 80DD, 80DDB, 80E, 80G (Donations), 80TTA/80TTB, 80U",
                   important: true
                 },
                 {
                   id: "p7-c12",
                   number: 12,
-                  title: "TDS, TCS, Advance Tax & Filing of Returns",
-                  subtopics: "TDS Provisions (194A, 194C, 194H, 194I, 194J, 194Q), Advance Tax Installments, Due Dates for ITR Filing, Updated Return (ITR-U)",
+                  title: "Computation of Total Income & Tax Liability of Individuals",
+                  subtopics: "Rebate under Section 87A, Surcharge Slabs, Health & Education Cess, Marginal Relief, Alternate Minimum Tax (AMT Section 115JC)",
+                  important: true
+                },
+                {
+                  id: "p7-c13",
+                  number: 13,
+                  title: "Procedural Compliance: TDS, TCS, Advance Tax & Returns",
+                  subtopics: "TDS Provisions (194A, 194C, 194H, 194I, 194J, 194Q), TCS (206C), Advance Tax Installments, ITR Types, Due Dates, Updated Return (ITR-U)",
+                  important: true
+                },
+                {
+                  id: "p7-c14",
+                  number: 14,
+                  title: "Taxation of Various Entities",
+                  subtopics: "Taxation of Partnership Firms & Partners (Section 184/40(b)), LLPs, Hindu Undivided Family (HUF), AOP/BOI, Charitable & Religious Trusts (Section 11-13), Co-operative Societies (Section 115BAD/115BAE)",
                   important: true
                 }
               ]
@@ -951,52 +944,80 @@ const SYLLABUS_DATA = {
               marks: 40,
               chapters: [
                 {
-                  id: "p7-c13",
-                  number: 13,
+                  id: "p7-c15",
+                  number: 1,
                   title: "Introduction to GST & Constitutional Framework",
-                  subtopics: "Need for GST, Dual GST Model (CGST, SGST, IGST, UTGST), GST Council, Goods and Services Tax Network (GSTN)",
+                  subtopics: "Need for GST, 101st Constitutional Amendment Act, Article 246A, Dual GST Model (CGST, SGST, IGST, UTGST), GST Council",
                   important: false
                 },
                 {
-                  id: "p7-c14",
-                  number: 14,
-                  title: "Levy & Collection of GST and Concept of Supply",
-                  subtopics: "Scope of Supply (Section 7), Schedule I, II & III Activities, Composite vs Mixed Supplies, Composition Levy Scheme (Section 10)",
-                  important: true
-                },
-                {
-                  id: "p7-c15",
-                  number: 15,
-                  title: "Time, Value & Place of Supply",
-                  subtopics: "Time of Supply for Goods & Services (Section 12 & 13), Valuation of Supply (Section 15 & Rules), Place of Supply (IGST Act)",
-                  important: true
-                },
-                {
                   id: "p7-c16",
-                  number: 16,
-                  title: "Input Tax Credit (ITC) Mechanism",
-                  subtopics: "Eligibility & Conditions for ITC (Section 16), Blocked Credit (Section 17(5)), Reversal of ITC, Utilization Order of ITC",
+                  number: 2,
+                  title: "Supply under GST (Concept & Classification)",
+                  subtopics: "Scope of Supply (Section 7), Schedule I (without consideration), Schedule II, Schedule III non-supplies, Composite vs Mixed Supplies (Section 8)",
                   important: true
                 },
                 {
                   id: "p7-c17",
-                  number: 17,
-                  title: "Registration, Tax Invoice & Credit/Debit Notes",
-                  subtopics: "Threshold Limits for Registration (Section 22 & 24), Cancellation, E-Invoicing Rules, Requirements of Tax Invoice",
+                  number: 3,
+                  title: "Charge of GST, Reverse Charge (RCM) & Composition Levy",
+                  subtopics: "Forward Charge (Section 9(1)), Reverse Charge Mechanism (Section 9(3)/9(4)), Composition Scheme (Section 10), Eligibility & Ineligibility",
                   important: true
                 },
                 {
                   id: "p7-c18",
-                  number: 18,
-                  title: "Returns, Payment of Tax & E-way Bill",
-                  subtopics: "GSTR-1, GSTR-3B, Annual Return (GSTR-9), Electronic Ledgers (Cash, Credit, Liability), E-way Bill Generation and Rules",
+                  number: 4,
+                  title: "Exemptions from GST",
+                  subtopics: "Power to Grant Exemptions (Section 11), Mega Exemption Notification, Exemptions on Healthcare, Education, Government Services, Agriculture & Transport",
                   important: true
                 },
                 {
                   id: "p7-c19",
-                  number: 19,
-                  title: "Customs Law: Valuation, Classification & Procedures",
-                  subtopics: "Levy of Customs Duty, Types of Duties (BCD, SWS, Anti-dumping, Safeguard), Valuation of Imported & Exported Goods, Baggage Rules",
+                  number: 5,
+                  title: "Place of Supply of Goods and Services",
+                  subtopics: "Place of Supply under IGST Act (Section 10 to 14), Domestic vs Cross-border Supplies, Determination of B2B and B2C Supply Location",
+                  important: true
+                },
+                {
+                  id: "p7-c20",
+                  number: 6,
+                  title: "Time and Value of Supply",
+                  subtopics: "Time of Supply for Goods (Section 12) & Services (Section 13), Valuation of Supply (Section 15 & Rules), Transaction Value, Inclusions & Exclusions",
+                  important: true
+                },
+                {
+                  id: "p7-c21",
+                  number: 7,
+                  title: "Input Tax Credit (ITC) Mechanism & Computation",
+                  subtopics: "Eligibility & Conditions for ITC (Section 16), Blocked Credit (Section 17(5)), Reversal of ITC (Rule 42/43), Utilization Order of ITC",
+                  important: true
+                },
+                {
+                  id: "p7-c22",
+                  number: 8,
+                  title: "Registration under GST",
+                  subtopics: "Threshold Limits for Registration (Section 22 & 24), Mandatory Registration, Deemed Registration, Revocation & Cancellation Procedures",
+                  important: true
+                },
+                {
+                  id: "p7-c23",
+                  number: 9,
+                  title: "Tax Invoice, Credit & Debit Notes, Accounts & Records",
+                  subtopics: "Tax Invoice Rules (Section 31), E-Invoicing System, Credit Notes (Section 34), Debit Notes, Statutory Maintenance of Accounts & Records (Section 35/36)",
+                  important: true
+                },
+                {
+                  id: "p7-c24",
+                  number: 10,
+                  title: "Payment of Tax, Returns, Refunds & E-Way Bill",
+                  subtopics: "Electronic Ledgers (Cash, Credit, Liability), TDS (Section 51) & TCS (Section 52), Returns (GSTR-1, GSTR-3B, GSTR-9), Refund Process (Section 54), E-Way Bill Rules (Rule 138)",
+                  important: true
+                },
+                {
+                  id: "p7-c25",
+                  number: 11,
+                  title: "Overview of Customs Law & Procedures",
+                  subtopics: "Levy of Customs Duty, Types of Duties (BCD, SWS, Anti-dumping, Safeguard), Valuation of Imported & Exported Goods, Baggage Rules, Duty Drawback",
                   important: true
                 }
               ]
