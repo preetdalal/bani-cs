@@ -704,7 +704,7 @@ const SYLLABUS_DATA = {
           marks: 100,
           pattern: "20% Case-based Objective + 80% Descriptive",
           duration: "3 Hours",
-          description: "Foreign exchange regulations, competition, consumer protection, property laws, and intellectual property rights (IPR).",
+          description: "Foreign exchange regulations, competition, consumer protection, real estate, SEZ, FCRA, and intellectual property rights (IPR).",
           parts: [
             {
               name: "Part I: Economic and Commercial Laws (60 Marks)",
@@ -727,50 +727,57 @@ const SYLLABUS_DATA = {
                 {
                   id: "p6-c3",
                   number: 3,
-                  title: "Overseas Direct Investment (ODI) & External Commercial Borrowings (ECB)",
-                  subtopics: "ODI Limits, Financial Commitment, ECB Parameters (Maturity, All-in-cost Ceiling, End-use restrictions)",
+                  title: "Overseas Direct Investment (ODI)",
+                  subtopics: "Overseas Direct Investment Rules & Regulations, Financial Commitment Limits, Reporting Requirements to RBI",
                   important: true
                 },
                 {
                   id: "p6-c4",
                   number: 4,
-                  title: "Prevention of Money Laundering Act, 2002 (PMLA)",
-                  subtopics: "Offence of Money Laundering, Attachment of Property, Obligations of Banking Companies & Intermediaries, FIU-IND",
+                  title: "Foreign Trade Policy & Procedure (FTP)",
+                  subtopics: "Foreign Trade Development & Regulation Act, FTP Guidelines, Advance Authorization, EPCG Scheme, RoDTEP Scheme",
                   important: true
                 },
                 {
                   id: "p6-c5",
                   number: 5,
-                  title: "Fugitive Economic Offenders & Benami Transactions Law",
-                  subtopics: "Declaration of Fugitive Economic Offender, Confiscation of Property, Prohibition of Benami Property Transactions Act",
+                  title: "Law relating to Foreign Contribution Regulation (FCRA)",
+                  subtopics: "Prohibition to accept Foreign Contribution, Registration & Prior Permission, Designated Bank Accounts (5 Marks Weightage)",
                   important: true
                 },
                 {
                   id: "p6-c6",
                   number: 6,
-                  title: "Competition Act, 2002",
-                  subtopics: "Anti-Competitive Agreements (Section 3), Abuse of Dominant Position (Section 4), Regulation of Combinations (Section 5/6), CCI",
+                  title: "Prevention of Money Laundering Act, 2002 (PMLA)",
+                  subtopics: "Offence of Money Laundering, Attachment of Property, Obligations of Banking Companies & Intermediaries, FIU-IND",
                   important: true
                 },
                 {
                   id: "p6-c7",
                   number: 7,
-                  title: "Consumer Protection Act, 2019",
-                  subtopics: "Consumer Rights, Central Consumer Protection Authority (CCPA), Product Liability, Dispute Redressal Commissions (District, State, National)",
+                  title: "Competition Law (Competition Act, 2002)",
+                  subtopics: "Anti-Competitive Agreements (Section 3), Abuse of Dominant Position (Section 4), Regulation of Combinations (Section 5/6), CCI",
                   important: true
                 },
                 {
                   id: "p6-c8",
                   number: 8,
-                  title: "Real Estate (Regulation and Development) Act, 2016 (RERA)",
-                  subtopics: "Registration of Real Estate Projects, Functions of Promoters, Allottee Rights, RERA Authority & Appellate Tribunal",
+                  title: "Consumer Protection Act, 2019",
+                  subtopics: "Consumer Rights, Central Consumer Protection Authority (CCPA), Product Liability, Dispute Redressal Commissions (District, State, National)",
                   important: true
                 },
                 {
                   id: "p6-c9",
                   number: 9,
-                  title: "Special Economic Zones Act, 2005 (SEZ)",
-                  subtopics: "Establishment of SEZ, Setting up of Units, Fiscal Concessions and Incentives, Single Window Clearance Mechanism",
+                  title: "Real Estate (Regulation and Development) Act, 2016 (RERA)",
+                  subtopics: "Registration of Real Estate Projects, Functions of Promoters, Allottee Rights, RERA Authority & Appellate Tribunal",
+                  important: true
+                },
+                {
+                  id: "p6-c10",
+                  number: 10,
+                  title: "Law relating to Special Economic Zones (SEZ Act, 2005)",
+                  subtopics: "Establishment of SEZ, Setting up of Units, Fiscal Concessions & Incentives, Single Window Clearance Mechanism",
                   important: false
                 }
               ]
@@ -780,43 +787,43 @@ const SYLLABUS_DATA = {
               marks: 40,
               chapters: [
                 {
-                  id: "p6-c10",
-                  number: 10,
+                  id: "p6-c11",
+                  number: 11,
                   title: "Law relating to Patents (Patents Act, 1970)",
                   subtopics: "Patentability Criteria (Novelty, Inventive Step, Industrial Application), Non-patentable Inventions (Section 3), Infringement & Remedies",
                   important: true
                 },
                 {
-                  id: "p6-c11",
-                  number: 11,
+                  id: "p6-c12",
+                  number: 12,
                   title: "Law relating to Trade Marks (Trade Marks Act, 1999)",
                   subtopics: "Absolute & Relative Grounds for Refusal, Registration Procedure, Well-Known Trademarks, Infringement vs Passing Off",
                   important: true
                 },
                 {
-                  id: "p6-c12",
-                  number: 12,
+                  id: "p6-c13",
+                  number: 13,
                   title: "Law relating to Copyrights (Copyright Act, 1957)",
                   subtopics: "Works protected, Ownership of Copyright, Moral Rights, Fair Dealing Provisions, Term of Copyright, Copyright Societies",
                   important: true
                 },
                 {
-                  id: "p6-c13",
-                  number: 13,
+                  id: "p6-c14",
+                  number: 14,
                   title: "Law relating to Geographical Indications (GI Act, 1999)",
                   subtopics: "Meaning of GI, Registration Process, Authorized Users, Infringement, Distinction between Trademark & GI",
                   important: false
                 },
                 {
-                  id: "p6-c14",
-                  number: 14,
+                  id: "p6-c15",
+                  number: 15,
                   title: "Law relating to Industrial Designs (Designs Act, 2000)",
                   subtopics: "Definition of Design, Novelty & Originality, Prohibition of Registration, Piracy of Registered Design",
                   important: false
                 },
                 {
-                  id: "p6-c15",
-                  number: 15,
+                  id: "p6-c16",
+                  number: 16,
                   title: "Trade Secrets, Cyber IPR & International Treaties",
                   subtopics: "Protection of Confidential Information, Domain Name Disputes (UDRP), Overview of TRIPS Agreement, Paris Convention, WIPO",
                   important: false
