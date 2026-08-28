@@ -1317,18 +1317,6 @@ button, input, select, textarea {
   opacity: 1;
   filter: drop-shadow(0 0 8px var(--cyan-400));
 }
-  transform: scale(1.15);
-}
-
-.btn-star.starred {
-  opacity: 1;
-  filter: drop-shadow(0 0 6px #f59e0b);
-}
-
-.btn-notes-toggle.has-notes {
-  opacity: 1;
-  filter: drop-shadow(0 0 6px var(--cyan-400));
-}
 
 /* Notes Drawer */
 .chapter-notes-drawer {
