@@ -582,7 +582,7 @@ const SYLLABUS_DATA = {
           marks: 100,
           pattern: "20% Case-based Objective + 80% Descriptive",
           duration: "3 Hours",
-          description: "Primary & secondary market mechanics, SEBI regulatory frameworks, listing obligations, takeovers, and insider trading.",
+          description: "Primary & secondary market mechanics, SEBI regulatory frameworks, listing obligations, takeovers, debt securities, and insider trading.",
           parts: [
             {
               name: "Part I: Capital Market (40 Marks)",
@@ -660,36 +660,50 @@ const SYLLABUS_DATA = {
                 {
                   id: "p5-c10",
                   number: 10,
-                  title: "SEBI (LODR) Regulations - Listing Obligations",
-                  subtopics: "Corporate Governance Requirements, Board Composition, Audit Committee, Prior Intimations, Disclosure of Event/Info (Reg 30)",
+                  title: "SEBI (Issue and Listing of Non-Convertible Securities) Regulations (NCS)",
+                  subtopics: "Issue & Listing of Debt Securities, Non-Convertible Redeemable Preference Shares (NCRPS), Credit Rating, Debenture Trustee Obligations, Private Placement",
                   important: true
                 },
                 {
                   id: "p5-c11",
                   number: 11,
-                  title: "SEBI (SAST) Regulations - Substantial Acquisition & Takeovers",
-                  subtopics: "Acquisition Triggers (25%), Mandatory Open Offer, Voluntary Offer, Exemptions, Creeping Acquisition, Escrow Account",
+                  title: "SEBI (LODR) Regulations - Listing Obligations",
+                  subtopics: "Corporate Governance Requirements, Board Composition, Audit Committee, Prior Intimations, Disclosure of Event/Info (Reg 30)",
                   important: true
                 },
                 {
                   id: "p5-c12",
                   number: 12,
-                  title: "SEBI (PIT) Regulations - Prohibition of Insider Trading",
-                  subtopics: "UPSI, Connected Person, Insider, Trading Window, Pre-clearance, Code of Conduct, Structured Digital Database (SDD)",
+                  title: "SEBI (SAST) Regulations - Substantial Acquisition & Takeovers",
+                  subtopics: "Acquisition Triggers (25%), Mandatory Open Offer, Voluntary Offer, Exemptions, Creeping Acquisition, Escrow Account",
                   important: true
                 },
                 {
                   id: "p5-c13",
                   number: 13,
-                  title: "SEBI (Buy-Back of Securities) & Delisting",
-                  subtopics: "Methods of Buyback (Tender Offer, Open Market), Escrow Mechanism, Voluntary and Compulsory Delisting (RBB Process)",
+                  title: "SEBI (PIT) Regulations - Prohibition of Insider Trading",
+                  subtopics: "UPSI, Connected Person, Insider, Trading Window, Pre-clearance, Code of Conduct, Structured Digital Database (SDD)",
                   important: true
                 },
                 {
                   id: "p5-c14",
                   number: 14,
-                  title: "SEBI (SBEB & Sweat Equity) Regulations",
-                  subtopics: "ESOP, ESPS, SARs, General Employee Benefits, Sweat Equity Issue Rules, Valuation and Disclosures",
+                  title: "SEBI (Buy-Back of Securities) Regulations",
+                  subtopics: "Methods of Buyback (Tender Offer, Open Market through Book Building/Stock Exchange), Board & Special Resolution Limits, Escrow Mechanism, Restrictions",
+                  important: true
+                },
+                {
+                  id: "p5-c15",
+                  number: 15,
+                  title: "SEBI (Delisting of Equity Shares) Regulations",
+                  subtopics: "Voluntary Delisting (Reverse Book Building RBB Process, Floor Price, Discovered Price), Compulsory Delisting by Exchanges, Special Provisions for Small Companies",
+                  important: true
+                },
+                {
+                  id: "p5-c16",
+                  number: 16,
+                  title: "SEBI (Share Based Employee Benefits & Sweat Equity) Regulations",
+                  subtopics: "ESOP, ESPS, SARs, General Employee Benefits Schemes, Sweat Equity Share Issuance Norms, Pricing, Valuation and Statutory Disclosures",
                   important: false
                 }
               ]
@@ -734,15 +748,15 @@ const SYLLABUS_DATA = {
                 {
                   id: "p6-c4",
                   number: 4,
-                  title: "Foreign Trade Policy & Procedure (FTP)",
-                  subtopics: "Foreign Trade Development & Regulation Act, FTP Guidelines, Advance Authorization, EPCG Scheme, RoDTEP Scheme",
+                  title: "Law relating to Foreign Contribution Regulation (FCRA)",
+                  subtopics: "Prohibition to accept Foreign Contribution, Registration & Prior Permission, Designated Bank Accounts (5 Marks Weightage)",
                   important: true
                 },
                 {
                   id: "p6-c5",
                   number: 5,
-                  title: "Law relating to Foreign Contribution Regulation (FCRA)",
-                  subtopics: "Prohibition to accept Foreign Contribution, Registration & Prior Permission, Designated Bank Accounts (5 Marks Weightage)",
+                  title: "Foreign Trade Policy & Procedure (FTP)",
+                  subtopics: "Foreign Trade Development & Regulation Act, FTP Guidelines, Advance Authorization, EPCG Scheme, RoDTEP Scheme",
                   important: true
                 },
                 {
@@ -974,55 +988,34 @@ const SYLLABUS_DATA = {
                 {
                   id: "p7-c18",
                   number: 4,
-                  title: "Exemptions from GST",
-                  subtopics: "Power to Grant Exemptions (Section 11), Mega Exemption Notification, Exemptions on Healthcare, Education, Government Services, Agriculture & Transport",
-                  important: true
-                },
-                {
-                  id: "p7-c19",
-                  number: 5,
                   title: "Place of Supply of Goods and Services",
                   subtopics: "Place of Supply under IGST Act (Section 10 to 14), Domestic vs Cross-border Supplies, Determination of B2B and B2C Supply Location",
                   important: true
                 },
                 {
-                  id: "p7-c20",
-                  number: 6,
+                  id: "p7-c19",
+                  number: 5,
                   title: "Time and Value of Supply",
                   subtopics: "Time of Supply for Goods (Section 12) & Services (Section 13), Valuation of Supply (Section 15 & Rules), Transaction Value, Inclusions & Exclusions",
                   important: true
                 },
                 {
-                  id: "p7-c21",
-                  number: 7,
+                  id: "p7-c20",
+                  number: 6,
                   title: "Input Tax Credit (ITC) Mechanism & Computation",
                   subtopics: "Eligibility & Conditions for ITC (Section 16), Blocked Credit (Section 17(5)), Reversal of ITC (Rule 42/43), Utilization Order of ITC",
                   important: true
                 },
                 {
-                  id: "p7-c22",
-                  number: 8,
+                  id: "p7-c21",
+                  number: 7,
                   title: "Registration under GST",
                   subtopics: "Threshold Limits for Registration (Section 22 & 24), Mandatory Registration, Deemed Registration, Revocation & Cancellation Procedures",
                   important: true
                 },
                 {
-                  id: "p7-c23",
-                  number: 9,
-                  title: "Tax Invoice, Credit & Debit Notes, Accounts & Records",
-                  subtopics: "Tax Invoice Rules (Section 31), E-Invoicing System, Credit Notes (Section 34), Debit Notes, Statutory Maintenance of Accounts & Records (Section 35/36)",
-                  important: true
-                },
-                {
-                  id: "p7-c24",
-                  number: 10,
-                  title: "Payment of Tax, Returns, Refunds & E-Way Bill",
-                  subtopics: "Electronic Ledgers (Cash, Credit, Liability), TDS (Section 51) & TCS (Section 52), Returns (GSTR-1, GSTR-3B, GSTR-9), Refund Process (Section 54), E-Way Bill Rules (Rule 138)",
-                  important: true
-                },
-                {
-                  id: "p7-c25",
-                  number: 11,
+                  id: "p7-c22",
+                  number: 8,
                   title: "Overview of Customs Law & Procedures",
                   subtopics: "Levy of Customs Duty, Types of Duties (BCD, SWS, Anti-dumping, Safeguard), Valuation of Imported & Exported Goods, Baggage Rules, Duty Drawback",
                   important: true
